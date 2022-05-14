@@ -10,7 +10,7 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    protected Integer id;
 
     @Column(nullable = false)
     protected Date created;
@@ -29,6 +29,9 @@ public class User {
 
     @Column
     private String bio;
+
+    @Transient
+    private boolean followed;
 
     @PrePersist
     protected void onCreate() {

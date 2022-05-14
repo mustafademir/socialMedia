@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    protected Integer id;
 
     @ManyToOne
     @JoinColumn(name = "post_id")
